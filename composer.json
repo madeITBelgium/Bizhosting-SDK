@@ -1,0 +1,39 @@
+{
+    "name": "madeitbelgium/bizhosting",
+    "description": "Bizhosting PHP SDK",
+    "keywords": ["Bizhosting", "webhosting", "domainname registration", "domainname", "VPS"],
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Tjebbe Lievens",
+            "email": "tjebbe.lievens@madeit.be"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "8.*",
+        "guzzlehttp/guzzle": "7.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "MadeITBelgium\\Bizhosting\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MadeITBelgium\\Bizhosting\\ServiceProvider\\Bizhosting"
+            ],
+            "aliases": {
+                "Helpdesk": "MadeITBelgium\\Bizhosting\\Facade\\Bizhosting"
+            }
+        }
+    }
+}
