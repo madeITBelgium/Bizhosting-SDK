@@ -44,7 +44,7 @@ class Bizhosting extends ServiceProvider
         $this->app->singleton('bizhosting', function ($app) {
             $config = $app->make('config')->get('bizhosting');
 
-            return new BH($config['apitoken']);
+            return new BH($config['apitoken'], $config['team_id']);
         });
     }
 

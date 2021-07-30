@@ -12,8 +12,9 @@ use GuzzleHttp\Client;
  */
 class Bizhosting
 {
-    private $version = '1.0.0';
+    private $version = '1.0.1';
     private $apitoken;
+    public $teamId;
     private $apiServer = 'https://www.bizhosting.be';
 
     private $client;
@@ -25,9 +26,10 @@ class Bizhosting
      * @param $clientSecret;
      * @param $client
      */
-    public function __construct($apitoken, $client = null)
+    public function __construct($apitoken, $teamId, $client = null)
     {
         $this->apitoken = $apitoken;
+        $this->teamId = $teamId;
 
         if ($client == null) {
             $this->createClient();
