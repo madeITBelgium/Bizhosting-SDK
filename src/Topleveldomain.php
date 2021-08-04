@@ -19,6 +19,6 @@ class Topleveldomain
 
     public function list($page = 1, $search = null)
     {
-        return $this->bizhosting->call('GET', '1.0/topleveldomain?' . http_build_query(['page' => $page, 'search' => $search, 'team_id' => $bizhosting->teamId]));
+        return $this->bizhosting->call('GET', '1.0/topleveldomain?' . http_build_query(['page' => $page, 'search' => $search, 'team_id' => $this->bizhosting->teamId]));
     }
 }
