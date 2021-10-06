@@ -3,7 +3,7 @@
     "description": "Bizhosting PHP SDK",
     "keywords": ["Bizhosting", "webhosting", "domainname registration", "domainname", "VPS"],
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "authors": [
         {
             "name": "Tjebbe Lievens",
