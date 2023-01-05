@@ -164,6 +164,17 @@ class Hosting
     {
         return $this->bizhosting->call('DELETE', '1.0/hosting/' . $hostingId . '/mail/' . $domainId . '/account/' . $id . '?' . http_build_query(['team_id' => $this->bizhosting->teamId]));
     }
+    
+    public function mailAccountUpdateOutOfOffice($hostingId, $domainId, $id, $active, $startAt, $endAt, $message)
+    {
+        return $this->bizhosting->call('PUT', '1.0/hosting/' . $hostingId . '/mail/' . $domainId . '/account/' . $id . '/out-of-office', [
+            'active' => $active,
+            'start_at' => $startAt,
+            'end_at' => $endAt,
+            'message' => $message,
+            'team_id' => $this->bizhosting->teamId
+        ]);
+    }
 
 
 
