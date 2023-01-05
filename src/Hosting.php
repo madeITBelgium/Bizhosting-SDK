@@ -232,4 +232,16 @@ class Hosting
     {
         return $this->bizhosting->call('DELETE', '1.0/hosting/' . $hostingId . '/cronjob/' . $cronjobId . '?' . http_build_query(['team_id' => $this->bizhosting->teamId]));
     }
+    
+    
+    public function backups($hostingId, $page = 1)
+    {
+        return $this->bizhosting->call('GET', '1.0/hosting/' . $hostingId . '/backup?' . http_build_query(['page' => $page, 'team_id' => $this->bizhosting->teamId]));
+    }
+    
+    
+    public function backup($hostingId, $backupId)
+    {
+        return $this->bizhosting->call('GET', '1.0/hosting/' . $hostingId . '/backup/' . $backupId . '?' . http_build_query(['team_id' => $this->bizhosting->teamId]));
+    }
 }
